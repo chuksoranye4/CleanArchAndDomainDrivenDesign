@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTOs\Department\**" />
+    <Compile Remove="Services\Department\**" />
+    <Content Remove="DTOs\Department\**" />
+    <Content Remove="Services\Department\**" />
+    <EmbeddedResource Remove="DTOs\Department\**" />
+    <EmbeddedResource Remove="Services\Department\**" />
+    <None Remove="DTOs\Department\**" />
+    <None Remove="Services\Department\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
